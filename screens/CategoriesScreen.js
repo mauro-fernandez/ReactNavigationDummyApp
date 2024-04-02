@@ -1,6 +1,6 @@
 import { FlatList } from 'react-native'
 import { CATEGORIES } from '../data/dummy-data'
-import { CategoryGridTitle } from '../data/components/CategoryGridTitle'
+import { CategoryGridTitle } from '../components/CategoryGridTitle'
 
 
 
@@ -9,7 +9,7 @@ import { CategoryGridTitle } from '../data/components/CategoryGridTitle'
 export const CategoriesScreen = ({navigation}) => {
     const renderCategoryItem = (itemData) => {
         const onPressHandler = () => {
-            navigation.navigate('MealsOverview')
+            navigation.navigate('MealsOverview', { categoryId: itemData.item.id })
         }
         return (
             <CategoryGridTitle title={itemData.item.title} color={itemData.item.color} onPress={onPressHandler}/>
