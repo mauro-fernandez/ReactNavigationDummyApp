@@ -4,7 +4,7 @@ import { CategoryGridTitle } from '../components/CategoryGridTitle'
 
 
 
-// la prop navigation la obtiene de haber seteado este componente en <Stack.Screen>
+// la prop "navigation" o "route" la obtiene de haber seteado este componente en <Stack.Screen>
 // sus hijos no heredan esta prop
 export const CategoriesScreen = ({navigation}) => {
     const renderCategoryItem = (itemData) => {
