@@ -4,6 +4,7 @@ import { MealDetailInfo } from '../components/MealDetailInfo'
 import { Subtitle } from '../components/MealDetail/Subtitle'
 import { List } from '../components/MealDetail/List'
 import { useLayoutEffect } from 'react'
+import { IconStarButton } from '../components/IconButton'
 
 
 export const MealDetailScreen = ({route, navigation}) => {
@@ -17,7 +18,7 @@ export const MealDetailScreen = ({route, navigation}) => {
     useLayoutEffect(() => {
         navigation.setOptions({
             headerRight: () => {
-                return <Button title='Tap me!' onPress={onButtonPressHandler}/>
+                return <IconStarButton iconName={'star'} color={'white'} onPress={onButtonPressHandler}/>
             }
         })
     },[])
